@@ -1,24 +1,26 @@
-# Metasonic2PASS-OWL Konverter
+A Back-up clone of: https://github.com/franjoWi/ConverterMetasonicToStandardPASS#
 
-Dieses Tool konvertiert Prozessmodelle aus der Metasonic Suite (.jpp-Dateien) in den PASS OWL-Exchange-Standard. Es wurde im Rahmen einer Bachelorarbeit an der Universität Münster entwickelt.
+# Metasonic2PASS-OWL Converter
 
-## Funktionen
+This tool converts process models from the Metasonic Suite (.jpp files) into the PASS OWL exchange standard. It was developed as part of a bachelor's thesis at the University of Münster.
 
-- Einlesen von Metasonic-XML-Dateien
-- Mapping der Modellelemente auf OWL-Strukturen
-- Export als standardkonformes OWL-Modell
-- Unterstützung für Subjekte, Zustände, Transitionen, Nachrichten u.v.m.
+## Features
 
-## Voraussetzungen
+- Reading Metasonic XML files
+- Mapping model elements to OWL structures
+- Export as a standards-compliant OWL model
+- Support for subjects, states, transitions, messages, and more
 
-- `alps.net.api` Bibliothek (z. B. über NuGet oder lokal einbinden)
+## Requirements
 
-## Nutzung
+- `alps.net.api` library (e.g., via NuGet or include locally)
+
+## Usage
 
 ```csharp
-string sourcePath = @"Pfad\zu\modell.jpp";
-string destinationPath = @"Pfad\zu\modell.owl";
-string baseuri = "http://www.example.org/meinprozess";
+string sourcePath = @"Path\to\model.jpp";
+string destinationPath = @"Path\to\model.owl";
+string baseuri = "http://www.example.org/myprocess";
 
 var converter = new PASSConverterMetasonicToStandard(sourcePath);
 converter.convertMetasonicModelToOWLStandard(destinationPath, baseuri);
